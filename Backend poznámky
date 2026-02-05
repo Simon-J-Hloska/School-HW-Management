@@ -18,6 +18,18 @@ Endpoint	Metoda	Popis
 /api/leaderboard	GET	statistiky
 frontend -> start timer -> backend vrati id -> frontend pak posle pri konci session id -> backend ulozi cas na backend a posle ho zpet na frontend
 
+app/
+├── Models/
+│   └── WatchSession.php
+│
+├── Http/
+│   └── Controllers/
+│       └── SessionController.php
+│
+routes/
+└── api.php
+
+
 DB architektura:
 
 watch_sessions
