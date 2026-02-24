@@ -60,4 +60,13 @@ class SessionController extends Controller
             'duration_seconds' => $session->duration_seconds
         ]);
     }
+    public function heartbeat(Request $request)
+    {
+        $request->validate([
+            'session_id' => 'required|integer|exists:watch_sessions,id',
+        ]);
+
+        // can update last_seen if you want
+        return response()->json(['status' => 'alive']);
+    }
 }

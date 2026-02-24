@@ -1,20 +1,10 @@
-import { videos } from "../videos";
-import VideoCard from "../components/VideoCard";
+import VideoPlayer from "./VideoPlayer"
 
-const VideosPage = () => {
-    const user = localStorage.getItem("user_name");
-
-    if (!user) {
-        window.location.href = "/";
-        return null;
-    }
-
-    return (
-        <div>
-            <h1>Videa</h1>
-            {videos.map((video) => (
-                <VideoCard key={video.id} video={video} />
-            ))}
-        </div>
-    );
-};
+export default function VideoCard({ video }: any) {
+  return (
+    <VideoPlayer
+      src={`/videos/${video.file}`}
+      title={video.title}
+    />
+  )
+}
