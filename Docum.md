@@ -140,7 +140,7 @@ GET /api/leaderboard
 |----|------|
 | R7 | Responsivní UI |
 | R8 | Jednoduché ovládání |
-| R9 | Přesnost ±1 s |
+| R9 | Přesnost +/-1 s |
 | R10 | Více videí |
 | R11 | DB |
 | R12 | Více uživatelů |
